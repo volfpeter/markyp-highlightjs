@@ -160,9 +160,15 @@ class __Themes(object):
 
 
 js: __JavaScript = __JavaScript()
+"""
+JavaScript `script` elements of Highlight.js.
+"""
 
 
 themes: __Themes = __Themes()
+"""
+Highlight.js themes for syntax highlighting.
+"""
 
 
 def highlight(code: str, *, language: str) -> pre:
