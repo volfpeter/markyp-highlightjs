@@ -35,6 +35,12 @@ def test_themes():
         '<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/darcula.min.css">'
     assert str(themes.default) ==\
         '<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css">'
+    assert str(themes.github) ==\
+        '<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">'
+    assert str(themes.github_gist) ==\
+        '<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github-gist.min.css">'
+    assert str(themes.idea) ==\
+        '<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/idea.min.css">'
     assert str(themes.monokai) ==\
         '<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/monokai.min.css">'
     assert str(themes.solarized_dark) ==\

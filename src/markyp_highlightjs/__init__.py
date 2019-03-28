@@ -117,6 +117,27 @@ class __Themes(object):
         return link.css(CDN.url_for_style("default"))
 
     @property
+    def github(self) -> link:
+        """
+        GitHub theme CSS link.
+        """
+        return link.css(CDN.url_for_style("github"))
+
+    @property
+    def github_gist(self) -> link:
+        """
+        GitHub gist theme CSS link.
+        """
+        return link.css(CDN.url_for_style("github-gist"))
+
+    @property
+    def idea(self) -> link:
+        """
+        Idea theme CSS link.
+        """
+        return link.css(CDN.url_for_style("idea"))
+
+    @property
     def monokai(self) -> link:
         """
         Monokai theme CSS link.

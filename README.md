@@ -34,7 +34,7 @@ code = "\n".join([
 page = webpage(
     highlight(code, language="python"),
     page_title="markyp-highlightjs demo page",
-    head_elements=[themes.monokai],
+    head_elements=[themes.github],
     javascript=js.js
 )
 
