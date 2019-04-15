@@ -11,7 +11,12 @@ from markyp_html.block import pre
 from markyp_html.inline import code as html_code
 
 
-__version__ = "0.1903.0"
+__author__ = "Peter Volf"
+__copyright__ = "Copyright 2019, Peter Volf"
+__email__ = "do.volfp@gmail.com"
+__license__ = "MIT"
+__url__ = "https://github.com/volfpeter/markyp-highlightjs"
+__version__ = "0.1904.0"
 
 
 class CDN(object):
