@@ -51,3 +51,9 @@ def test_themes():
 def test_highlight():
     assert highlight("import antigravity", language="python").markup ==\
         '<pre >\n<code class="python">import antigravity</code>\n</pre>'
+
+    assert highlight("import antigravity", language="python", class_="my-pre").markup ==\
+        '<pre class="my-pre">\n<code class="python">import antigravity</code>\n</pre>'
+
+    assert highlight("import antigravity", language="python", class_="my-pre", attr=42).markup ==\
+        '<pre attr="42" class="my-pre">\n<code class="python">import antigravity</code>\n</pre>'

@@ -4,8 +4,9 @@ Components for adding syntax highlighting to a `markyp-html` webpage using Highl
 See https://www.npmjs.com/package/highlight.js.
 """
 
-from typing import Tuple
+from typing import Optional, Tuple
 
+from markyp import PropertyValue
 from markyp_html import link, script
 from markyp_html.block import pre
 from markyp_html.inline import code as html_code
@@ -179,13 +180,17 @@ Highlight.js themes for syntax highlighting.
 """
 
 
-def highlight(code: str, *, language: str) -> pre:
+def highlight(code: str, *, language: str, class_: Optional[str] = None, **kwargs: PropertyValue) -> pre:
     """
     Higher order component that creates a `<pre><code class="{language}">{code}</code></pre>`
     HTML segment that Highlight.js will automatically highlight.
 
+    Keyword arguments not listed in the arguments section are turned into element
+    attributes on the created `pre` element.
+
     Arguments:
         code: The actual code to highlight.
         language: The name of the programming language, see https://highlightjs.org/static/demo/.
+        class_: CSS classes to add to the created `pre` element.
     """
-    return pre(html_code(code, class_=language))
+    return pre(html_code(code, class_=language), class_=class_, **kwargs)
