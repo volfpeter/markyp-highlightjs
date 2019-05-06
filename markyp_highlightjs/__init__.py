@@ -20,7 +20,10 @@ __url__ = "https://github.com/volfpeter/markyp-highlightjs"
 __version__ = "0.1905.0"
 
 
-__all__ = ("CDN", "js", "themes", "highlight")
+__all__ = (
+    "CDN", "js", "themes", "highlight",
+    "bash", "css", "html", "javascript", "json", "markdown", "python", "sql", "xml"
+)
 
 
 class CDN(object):
@@ -179,6 +182,9 @@ themes: __Themes = __Themes()
 Highlight.js themes for syntax highlighting.
 """
 
+# -- Generic highligher methods
+# -----------------------------------------------------------------------------
+
 
 def highlight(code: str, *, language: str, class_: Optional[str] = None, **kwargs: PropertyValue) -> pre:
     """
@@ -194,3 +200,133 @@ def highlight(code: str, *, language: str, class_: Optional[str] = None, **kwarg
         class_: CSS classes to add to the created `pre` element.
     """
     return pre(html_code(code, class_=language), class_=class_, **kwargs)
+
+
+# -- Language-specific highligher methods
+# -----------------------------------------------------------------------------
+
+
+def bash(code: str, *, class_: Optional[str] = None, **kwargs: PropertyValue) -> pre:
+    """
+    Highlighter method for Bash code.
+
+    Keyword arguments not listed in the arguments section are turned into element
+    attributes on the created `pre` element.
+
+    Arguments:
+        code: The actual code to highlight.
+        class_: CSS classes to add to the created `pre` element.
+    """
+    return highlight(code, language="bash", class_=class_, **kwargs)
+
+
+def css(code: str, *, class_: Optional[str] = None, **kwargs: PropertyValue) -> pre:
+    """
+    Highlighter method for CSS code.
+
+    Keyword arguments not listed in the arguments section are turned into element
+    attributes on the created `pre` element.
+
+    Arguments:
+        code: The actual code to highlight.
+        class_: CSS classes to add to the created `pre` element.
+    """
+    return highlight(code, language="css", class_=class_, **kwargs)
+
+
+def html(code: str, *, class_: Optional[str] = None, **kwargs: PropertyValue) -> pre:
+    """
+    Highlighter method for HTML code.
+
+    Keyword arguments not listed in the arguments section are turned into element
+    attributes on the created `pre` element.
+
+    Arguments:
+        code: The actual code to highlight.
+        class_: CSS classes to add to the created `pre` element.
+    """
+    return highlight(code, language="html", class_=class_, **kwargs)
+
+
+def javascript(code: str, *, class_: Optional[str] = None, **kwargs: PropertyValue) -> pre:
+    """
+    Highlighter method for JavaScript code.
+
+    Keyword arguments not listed in the arguments section are turned into element
+    attributes on the created `pre` element.
+
+    Arguments:
+        code: The actual code to highlight.
+        class_: CSS classes to add to the created `pre` element.
+    """
+    return highlight(code, language="javascript", class_=class_, **kwargs)
+
+
+def json(code: str, *, class_: Optional[str] = None, **kwargs: PropertyValue) -> pre:
+    """
+    Highlighter method for JSON code.
+
+    Keyword arguments not listed in the arguments section are turned into element
+    attributes on the created `pre` element.
+
+    Arguments:
+        code: The actual code to highlight.
+        class_: CSS classes to add to the created `pre` element.
+    """
+    return highlight(code, language="json", class_=class_, **kwargs)
+
+
+def markdown(code: str, *, class_: Optional[str] = None, **kwargs: PropertyValue) -> pre:
+    """
+    Highlighter method for MarkDown code.
+
+    Keyword arguments not listed in the arguments section are turned into element
+    attributes on the created `pre` element.
+
+    Arguments:
+        code: The actual code to highlight.
+        class_: CSS classes to add to the created `pre` element.
+    """
+    return highlight(code, language="markdown", class_=class_, **kwargs)
+
+
+def python(code: str, *, class_: Optional[str] = None, **kwargs: PropertyValue) -> pre:
+    """
+    Highlighter method for Python code.
+
+    Keyword arguments not listed in the arguments section are turned into element
+    attributes on the created `pre` element.
+
+    Arguments:
+        code: The actual code to highlight.
+        class_: CSS classes to add to the created `pre` element.
+    """
+    return highlight(code, language="python", class_=class_, **kwargs)
+
+
+def sql(code: str, *, class_: Optional[str] = None, **kwargs: PropertyValue) -> pre:
+    """
+    Highlighter method for SQL code.
+
+    Keyword arguments not listed in the arguments section are turned into element
+    attributes on the created `pre` element.
+
+    Arguments:
+        code: The actual code to highlight.
+        class_: CSS classes to add to the created `pre` element.
+    """
+    return highlight(code, language="sql", class_=class_, **kwargs)
+
+
+def xml(code: str, *, class_: Optional[str] = None, **kwargs: PropertyValue) -> pre:
+    """
+    Highlighter method for XML code.
+
+    Keyword arguments not listed in the arguments section are turned into element
+    attributes on the created `pre` element.
+
+    Arguments:
+        code: The actual code to highlight.
+        class_: CSS classes to add to the created `pre` element.
+    """
+    return highlight(code, language="xml", class_=class_, **kwargs)

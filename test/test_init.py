@@ -1,7 +1,4 @@
-from markyp_highlightjs import CDN,\
-                               js,\
-                               themes,\
-                               highlight
+from markyp_highlightjs import *
 
 def test_HighlightJSCDN():
     assert CDN.CDN_URL == "https://cdnjs.cloudflare.com/ajax/libs/highlight.js"
@@ -57,3 +54,57 @@ def test_highlight():
 
     assert highlight("import antigravity", language="python", class_="my-pre", attr=42).markup ==\
         '<pre attr="42" class="my-pre">\n<code class="python">import antigravity</code>\n</pre>'
+
+def test_bash():
+    assert bash("whatever code").markup ==\
+        '<pre >\n<code class="bash">whatever code</code>\n</pre>'
+    assert bash("whatever code", class_="my-pre", attr=42).markup ==\
+        '<pre attr="42" class="my-pre">\n<code class="bash">whatever code</code>\n</pre>'
+
+def test_css():
+    assert css("whatever code").markup ==\
+        '<pre >\n<code class="css">whatever code</code>\n</pre>'
+    assert css("whatever code", class_="my-pre", attr=42).markup ==\
+        '<pre attr="42" class="my-pre">\n<code class="css">whatever code</code>\n</pre>'
+
+def test_html():
+    assert html("whatever code").markup ==\
+        '<pre >\n<code class="html">whatever code</code>\n</pre>'
+    assert html("whatever code", class_="my-pre", attr=42).markup ==\
+        '<pre attr="42" class="my-pre">\n<code class="html">whatever code</code>\n</pre>'
+
+def test_javascript():
+    assert javascript("whatever code").markup ==\
+        '<pre >\n<code class="javascript">whatever code</code>\n</pre>'
+    assert javascript("whatever code", class_="my-pre", attr=42).markup ==\
+        '<pre attr="42" class="my-pre">\n<code class="javascript">whatever code</code>\n</pre>'
+
+def test_json():
+    assert json("whatever code").markup ==\
+        '<pre >\n<code class="json">whatever code</code>\n</pre>'
+    assert json("whatever code", class_="my-pre", attr=42).markup ==\
+        '<pre attr="42" class="my-pre">\n<code class="json">whatever code</code>\n</pre>'
+
+def test_markdown():
+    assert markdown("whatever code").markup ==\
+        '<pre >\n<code class="markdown">whatever code</code>\n</pre>'
+    assert markdown("whatever code", class_="my-pre", attr=42).markup ==\
+        '<pre attr="42" class="my-pre">\n<code class="markdown">whatever code</code>\n</pre>'
+
+def test_python():
+    assert python("whatever code").markup ==\
+        '<pre >\n<code class="python">whatever code</code>\n</pre>'
+    assert python("whatever code", class_="my-pre", attr=42).markup ==\
+        '<pre attr="42" class="my-pre">\n<code class="python">whatever code</code>\n</pre>'
+
+def test_sql():
+    assert sql("whatever code").markup ==\
+        '<pre >\n<code class="sql">whatever code</code>\n</pre>'
+    assert sql("whatever code", class_="my-pre", attr=42).markup ==\
+        '<pre attr="42" class="my-pre">\n<code class="sql">whatever code</code>\n</pre>'
+
+def test_xml():
+    assert xml("whatever code").markup ==\
+        '<pre >\n<code class="xml">whatever code</code>\n</pre>'
+    assert xml("whatever code", class_="my-pre", attr=42).markup ==\
+        '<pre attr="42" class="my-pre">\n<code class="xml">whatever code</code>\n</pre>'
