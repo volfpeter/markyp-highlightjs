@@ -1,3 +1,7 @@
+[![Downloads](https://pepy.tech/badge/markyp-highlightjs)](https://pepy.tech/project/markyp-highlightjs)
+[![Downloads](https://pepy.tech/badge/markyp-highlightjs/month)](https://pepy.tech/project/markyp-highlightjs/month)
+[![Downloads](https://pepy.tech/badge/markyp-highlightjs/week)](https://pepy.tech/project/markyp-highlightjs/week)
+
 # markyp-highlightjs
 
 Highlight.js-based syntax highlighting for web pages built with [markyp-html](https://github.com/volfpeter/markyp-html).
